@@ -85,6 +85,7 @@ def import_resource_classes(resource_map, resource_types):
         except ModuleNotFoundError:  # pragma: no cover
             import_errs.add(rmodule)
 
+
     for emod in import_errs:  # pragma: no cover
         for rtype, rclass in resource_map.items():
             if emod == rclass.rsplit('.', 1)[0]:

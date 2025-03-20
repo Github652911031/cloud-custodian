@@ -16,7 +16,6 @@ def load_resources(resource_types=('*',)):
         if parts[-1] == '*':
             r = '*'
         pmap.setdefault(parts[0], []).append(r)
-
     load_providers(set(pmap))
     missing = []
     for pname, p in clouds.items():
