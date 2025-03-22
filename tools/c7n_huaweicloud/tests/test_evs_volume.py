@@ -9,7 +9,7 @@ class VolumeTest(BaseTest):
         factory = self.replay_flight_data('evs_volume_query')
         p = self.load_policy({
              'name': 'all-volumes',
-             'resource': 'huaweicloud.sfsturbo'},
+             'resource': 'huaweicloud.volume'},
             session_factory=factory)
         resources = p.run()
         self.assertEqual(len(resources), 1)
